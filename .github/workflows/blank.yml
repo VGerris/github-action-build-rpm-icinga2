@@ -30,7 +30,7 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
         name: checkout
-      - uses: docker://vgerris/mock-rpmbuilder
+      - uses: docker-mock-rpmbuilder-icinga2@master
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: pwd && echo ${{ github.workspace }}  && ls -lrta #./build-rpm.sh
