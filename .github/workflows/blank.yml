@@ -19,7 +19,7 @@ jobs:
   build:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
-    container: vgerris/mock-rpmbuilder
+    #container: vgerris/mock-rpmbuilder
     env:
       SOURCE_RPM: icinga2-2.13.5-1.fc36.icinga.src.rpm
       MOCK_CONFIG: rocky+epel-9-x86_64
@@ -31,6 +31,7 @@ jobs:
       - uses: actions/checkout@v4
         name: checkout
       - uses: vgerris/docker-mock-rpmbuilder-icinga2@master
+       # options: --sysctl net.ipv6.conf.all.disable_ipv6=0 --privileged
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: pwd && echo ${{ github.workspace }}  && ls -lrta #./build-rpm.sh
