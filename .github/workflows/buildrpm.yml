@@ -11,7 +11,7 @@ env:
 jobs:
   build-rpm:
     name: Build rpms
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     steps:
       - name: run docker mock container
         uses: VGerris/docker-mock-rpmbuilder-icinga2@master
