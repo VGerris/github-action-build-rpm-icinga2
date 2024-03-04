@@ -14,5 +14,5 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       - name: run docker mock container
-        uses: mmornati/docker-mock-rpmbuilder@master
+        uses: vgerris/mock-rpmbuilder@master
 
