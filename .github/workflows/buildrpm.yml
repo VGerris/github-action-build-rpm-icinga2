@@ -12,7 +12,18 @@ jobs:
   build-rpm:
     name: Build rpms
     runs-on: ubuntu-22.04
-    steps:
-      - name: run docker mock container
-        uses: VGerris/docker-mock-rpmbuilder-icinga2@master
 
+    container:
+      image: VGerris/docker-mock-rpmbuilder-icinga2:master
+
+      options: --sysctl net.ipv6.conf.all.disable_ipv6=0
+    defaults:
+      run:
+        working-directory: ./
+    steps:
+
+      - name: Fetch the binaries
+        uses: actions/download-artifact@v4
+        with:
+          name: srpms
+          path: /srpm
