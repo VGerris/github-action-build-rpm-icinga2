@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-22.04
 
     container:
-      image: VGerris/docker-mock-rpmbuilder-icinga2:master
+      image: vgerris/mock-rpmbuilder
 
       options: --sysctl net.ipv6.conf.all.disable_ipv6=0
     defaults:
