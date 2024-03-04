@@ -4,8 +4,9 @@ on:
     branches: [ master]
 
 env: 
-    SOURCE_RPM: "icinga2-2.13.5-1.fc36.icinga.src.rpm"
-    MOCK_CONFIG: "rocky+epel-9-x86_64"
+    SOURCE_RPM: icinga2-2.13.5-1.fc36.icinga.src.rpm
+    MOCK_CONFIG: rocky+epel-9-x86_64
+    MOUNT_POINT: ${GITHUB_WORKSPACE}
 
 jobs:
   build-rpm:
