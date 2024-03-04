@@ -1,10 +1,10 @@
-name: Build Repo RPM"
+name: Build Repo RPM
 on:
   push:
     branches: [ master]
 
 env: 
-    SOURCE_RPM: /github/workspace/icinga2-2.13.5-1.fc36.icinga.src.rpm
+    SOURCE_RPM: ${GITHUB_WORKSPACE}/icinga2-2.13.5-1.fc36.icinga.src.rpm
     MOCK_CONFIG: rocky+epel-9-x86_64
     MOUNT_POINT: ${GITHUB_WORKSPACE}
 
