@@ -24,10 +24,4 @@ jobs:
     defaults:
       run:
         working-directory: ./
-    steps:
 
-      - name: Fetch the binaries
-        uses: actions/download-artifact@v4
-        with:
-          name: srpms
-          path: /srpm
