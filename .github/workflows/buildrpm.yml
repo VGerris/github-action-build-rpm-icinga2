@@ -1,0 +1,17 @@
+name: Build Repo RPM"
+on:
+  push:
+    branches: [ master]
+
+env: 
+    SOURCE_RPM: "icinga2-2.13.5-1.fc36.icinga.src.rpm"
+    MOCK_CONFIG: "rocky+epel-9-x86_64"
+
+jobs:
+  build-rpm:
+    name: Build rpms
+    runs-on: ubuntu-20.04
+    steps:
+      - name: run docker mock container
+        uses: mmornati/docker-mock-rpmbuilder@master
+
