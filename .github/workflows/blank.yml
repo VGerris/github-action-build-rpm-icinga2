@@ -45,9 +45,5 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: workspace_artifacts
-          path: ${{ github.workspace }}          
-
-  my-job:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: docker://myimage:latest
+          path: ${{ github.workspace }}
+          
